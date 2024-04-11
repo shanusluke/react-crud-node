@@ -55,4 +55,32 @@ node index.js
 ```
 # Demo
 
-<video controls src="docs/project-demo.mp4" title="Title"></video>
+## homepage
+
+![image](https://github.com/shanusluke1999/react-crud-node/assets/79683487/4b17d468-c238-48a3-848b-e657dafcbbf8)
+
+## Form to add student details 
+
+![image](https://github.com/shanusluke1999/react-crud-node/assets/79683487/868d7ec3-56e6-4420-a3d6-93eedd8a7e15)
+
+## Give data
+
+![image](https://github.com/shanusluke1999/react-crud-node/assets/79683487/067898b2-7e29-47ec-81b7-9439ca3fc6b2)
+
+## Data added
+
+![image](https://github.com/shanusluke1999/react-crud-node/assets/79683487/9bff26bc-91eb-47ed-8f4b-fdb727c62ffa)
+
+## Form to update details
+
+![image](https://github.com/shanusluke1999/react-crud-node/assets/79683487/7aadac7e-cc62-4045-a993-312ccf252d1c)
+
+## Updated student details
+
+![image](https://github.com/shanusluke1999/react-crud-node/assets/79683487/98131c53-a7f7-4f99-9046-dd229a31016c)
+
+## Delete student details
+
+https://github.com/shanusluke1999/react-crud-node/assets/79683487/f0d1e467-a7c9-411a-b6fe-8b4858ca8075
+
+
