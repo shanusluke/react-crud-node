@@ -4,6 +4,21 @@ import {Link} from 'react-router-dom'
 
 function Student() {
 
+
+  const [student, setStudent] = useState([]); // state variable to store student data
+
+  // useEffect hook, to fetch the student data
+  useEffect(() => {
+    axios.get('http://localhost:4000/')
+    .then(res => setStudent(res.data)) // Update the student state variable with the fetched data
+    .catch(err => console.log(err))
+  }, [])
+
+  const handleDelete = async (id) => { // function to handle deleting a student
+    try{
+      await axios.delete('http://localhost:4000/student/'+id) // Send a DELETE request to the server
+      window.location.reload() // Reload the page after the student is deleted
+=======
   const [student, setStudent] = useState([])
   useEffect(() => {
     axios.get('http://localhost:4000/')
@@ -15,6 +30,7 @@ function Student() {
     try{
       await axios.delete('http://localhost:4000/student/'+id)
       window.location.reload()
+
     }catch(err){
       console.log(err);
     }
