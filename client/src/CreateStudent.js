@@ -9,14 +9,16 @@ function CreateStudent() {
     const [subject,setSubject] = useState('')
     const [total_mark,setTotalMark] = useState('')
     const [grade_status,setGradeStatus] = useState('')
-    const navigate = useNavigate();
+    const navigate = useNavigate(); // navigate function from react-router
 
+      // function to be called when the form is submitted
     function handleSubmit(event) {
         event.preventDefault();
-        axios.post('http://localhost:4000/create',{name, reg_no,subject, total_mark, grade_status})
+        axios.post('http://localhost:4000/create', // Send a POST request to the server to create a new student
+        {name, reg_no,subject, total_mark, grade_status})
         .then(res => {
             console.log(res);
-            navigate('/');
+            navigate('/'); // Navigate back to the home page after the student is created
         }).catch(err =>console.log(err));
     }
 
