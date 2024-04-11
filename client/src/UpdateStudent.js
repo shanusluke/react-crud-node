@@ -5,19 +5,14 @@ import {useNavigate, useParams} from 'react-router-dom'
 function UpdateStudent() {
 
 
-
     const {id} = useParams(); //get the student id from the url parameters
 
     // Define state variables for the student details
-=======
-    const {id} = useParams();
-
     const [name,setName] = useState('')
     const [reg_no,setRegno] = useState('')
     const [subject,setSubject] = useState('')
     const [total_mark,setTotalMark] = useState('')
     const [grade_status,setGradeStatus] = useState('')
-
 
     const navigate = useNavigate(); // navigate function from react-router
 
@@ -26,13 +21,6 @@ function UpdateStudent() {
       axios.get('http://localhost:4000/student/'+id)
       .then(res => {
         // Update the state variables with the fetched student details
-
-    const navigate = useNavigate();
-
-    useEffect(() => {
-      axios.get('http://localhost:4000/student/'+id)
-      .then(res => {
-
           setName(res.data.name);
           setRegno(res.data.reg_no);
           setSubject(res.data.subject);
@@ -40,7 +28,6 @@ function UpdateStudent() {
           setGradeStatus(res.data.grade_status);
       }).catch(err =>console.log(err));
   }, [id]);
-
 
   // function to be called when the form is submitted
     function handleSubmit(event) {
@@ -50,14 +37,6 @@ function UpdateStudent() {
         .then(res => {
             console.log(res);
             navigate('/');  // Navigate back to the home page after the student details are updated
-
-    function handleSubmit(event) {
-        event.preventDefault();
-        axios.put('http://localhost:4000/update/'+id,{id, name, reg_no,subject, total_mark, grade_status})
-        .then(res => {
-            console.log(res);
-            navigate('/');
-
         }).catch(err =>console.log(err));
     }
 
