@@ -18,7 +18,7 @@ function Student() {
     try{
       await axios.delete('http://localhost:4000/student/'+id) // Send a DELETE request to the server
       window.location.reload() // Reload the page after the student is deleted
-=======
+
   const [student, setStudent] = useState([])
   useEffect(() => {
     axios.get('http://localhost:4000/')
